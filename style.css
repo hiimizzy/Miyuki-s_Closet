@@ -43,13 +43,21 @@ button{
     position: relative;
 }
 
-.start, a{
-    background-color: #e3c9f2;
+.start_button{
+    background-color: #b051e7;
     font-size: 30px;
     color: #000;
     padding: 10px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+}
+
+.start-button:hover{
+    background-color: #d1a8e0;
+}
+
+.start_button, a{
+    font-style: none;
 }
 
