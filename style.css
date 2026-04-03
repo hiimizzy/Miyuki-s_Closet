@@ -4,7 +4,7 @@ body {
   padding: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #f9c4f3;
+  background-color: #eee7ed;
 
 }
 
@@ -32,19 +32,35 @@ a {
 /*** START PAGE ***/
 
 .container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
   display: flex;
-  align-items: center;
   height: 100%;
   width: 100%;
+  padding: 2rem;
+  
   background-image: url("img/3.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; 
 }
 
+.container, h1{
+  font-size: 3rem;
+  color: rgb(18, 6, 18);
+  text-shadow: 3px 3px 0 #d77fb2;
+  padding: 90px 0 9px 0;
+}
+
+.container img{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
 .start_button {
+  padding: 0.8rem 2rem;
   align-items: center;
   justify-content: center;
   background-color: #c659b6;
@@ -114,7 +130,7 @@ a {
 
 /* Correção do fundo: caso a imagem demore ou não exista, fundo rosa fofo */
 body {
-  background-color: #f087e4;
+  background-color: #f3e2f1;
 }
 
 /* Remove qualquer estilo conflitante de .start que estava no CSS antigo */
