@@ -1,63 +1,125 @@
 html,
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #e3c9f2;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9c4f3;
+
 }
 
 *,
 *::before,
-*::after{
-    box-sizing: border-box;
+*::after {
+  box-sizing: border-box;
 }
 
-/* Safe Area Insets */
-body{
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 h1,
-p,
-a,
-button{
-    font-family: "Pixellari", sans-serif !important;
+h2,
+h3,
+button,
+a {
+  font-family: "Pixelify Sans", sans-serif !important;
 }
 
-/*Start Game Page */
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/*** START PAGE ***/
+
+.container {
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("img/3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; 
+}
+
+.start_button {
+  align-items: center;
+  justify-content: center;
+  background-color: #c659b6;
+  font-size: 30px;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start_button:hover {
+  transform: scale(1.2);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 680px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .container h1 {
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 0 #b1126e;
+  }
+
+  .container p {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .start_button {
+    font-size: 1rem;
+    padding: 0.6rem 1.6rem;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .container h1 {
+    font-size: 1rem;
+  }
+
+  .start_button {
+    font-size: 1rem;
+  }
+
+  .brand-logo {
+    max-width: 100px;
+  }
+}
+
+/* Ajuste extra: para que o container centralize perfeitamente em alturas baixas */
+@media (max-height: 600px) {
+  .container {
     justify-content: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    background-image: url("assents/background.png");
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    padding: 20px;
+  }
+
+  .container h1 {
+    margin-bottom: 1rem;
+  }
+
 }
 
-.start_button{
-    background-color: #b051e7;
-    font-size: 30px;
-    color: #000;
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
+/* Correção do fundo: caso a imagem demore ou não exista, fundo rosa fofo */
+body {
+  background-color: #f087e4;
 }
 
-.start-button:hover{
-    background-color: #d1a8e0;
+/* Remove qualquer estilo conflitante de .start que estava no CSS antigo */
+.start {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
-
-.start_button, a{
-    font-style: none;
-}
-

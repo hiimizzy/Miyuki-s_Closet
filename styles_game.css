@@ -1,0 +1,211 @@
+/*** GAME ***/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9c4f3;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* remove scroll */
+}
+
+/*** ÁREA PRINCIPAL (PERSONAGEM + CLOSET) ***/
+
+.game-area {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/*** CONTAINER PRINCIPAL ***/
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 95vh;
+  width: 100%;
+  max-width: 500px;
+}
+
+/*** CONTROLES ***/
+
+/* .controls {
+  display: flex;
+  gap: 10px;
+} */
+
+.controls {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+/* .controls button {
+  background-color: #d91beb;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: #fff;
+  font-size: 16px;
+} */
+
+.controls button {
+      background-color: #d91beb;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      padding: 3px 20px;
+      color: white;
+      font-size: 24px;
+      font-family: "Pixelify Sans", sans-serif;
+      font-weight: bold;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 5px 0 #8a0e9e;
+      min-width: 100px;
+    }
+
+/*** PERSONAGEM (TAMANHO MÉDIO PERFEITO) ***/
+
+.character-container {
+  position: relative;
+  width: 820px;   
+  height: 600px; /* mantém proporção */
+}
+
+.character {
+  width: 100%;
+  height: 100%;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*** OVERLAY DAS ROUPAS ***/
+
+#clothes-overlay {
+  position: absolute;
+  inset: 0;
+}
+
+/*** ROUPAS ***/
+
+#clothes-overlay img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+/*** AJUSTES FINOS (VESTIDOS) ***/
+
+#pink-dress {
+  transform: scale(0.75) translateY(-20px);
+}
+
+#green-dress {
+  transform: scale(0.75) translateY(-20px);
+}
+
+/*** BOTÕES DE ROUPA ***/
+
+.clothes-buttons {
+        display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      padding: 8px 12px;
+      background: rgba(255, 235, 245, 0.7);
+      border-radius: 60px;
+      backdrop-filter: blur(4px);
+
+}
+
+
+.clothes-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(90px, 110px));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  padding: 16px 20px;
+  background: rgba(255, 235, 245, 0.7);
+  border-radius: 60px;
+  backdrop-filter: blur(4px);
+}
+
+.clothes-buttons button {
+  width: 100%;
+  height: 90px;
+  background-color: #fff6fc;
+  border: 3px solid #ff96d0;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #b1328a;
+}
+
+
+.clothes-buttons button img {
+  width: 40px;
+  height: 30px;
+}
+
+/*** RESPONSIVO ***/
+
+@media (max-width: 650px) {
+  .clothes-buttons {
+    grid-template-columns: repeat(3, minmax(70px, 85px));
+    gap: 12px;
+  }
+  .clothes-buttons button {
+    height: 70px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clothes-buttons {
+    grid-template-columns: repeat(3, minmax(60px, 70px));
+    gap: 8px;
+  }
+  .clothes-buttons button {
+    height: 60px;
+    font-size: 10px;
+  }
+}

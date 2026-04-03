@@ -1,11 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="icon" href="img/paws.png" type="image/svg+xml" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles_game.css" />
+    <link rel="shortcut icon" href="img/paws.png" type="image/x-icon">
+    <script src="script.js"></script>
+
+    <title>Miyuki's Closet</title> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="controls">
+        <a href="start_game.html">
+          <button>◀ Back</button>
+        </a>
+        <button onclick="reset()">Reset</button>
+        <audio id="myAudio" src="sound/backgroundmusic.mp3" loop></audio>
+        <button onclick="playAudio()" id="music">🎵 Music</button>
+        <button onclick="saveCharacter()">💾 Save</button>
+      </div>
+      <div class="game-area">
+      <div class="character-container">
+        <!-- Personagem -->
+        <div class="character">
+          <img src="img/character.png" alt="character" />
+        </div>
+        <!-- Closet -->
+        <div id="clothes-overlay">
+          <img
+            src="img/pink_dress.png"
+            alt="pink_dress"
+            id="pink_dress"
+            style="display: none"
+          />
+          <img
+            src="img/pink_shoes.png"
+            alt="pink_shoes"
+            id="pink_shoes"
+            style="display: none"
+          />
+          <img
+            src="img/bag.png"
+            alt="bag"
+            id="bag"
+            style="display: none"
+          />
+           <img
+            src="img/green_dress.png"
+            alt="green_dress"
+            id="green_dress"
+            style="display: none"
+          />
+           <img
+            src="img/green_shoes.png"
+            alt="green_shoes"
+            id="green_shoes"
+            style="display: none"
+          />
+          <img
+            src="img/luffy.png"
+            alt="luffy"
+            id="luffy"
+            style="display: none"
+          />
+        </div>
+      </div>
+
+      <audio id="pop" src="sound/pop.wav"></audio>
+      <div class="clothes-buttons">
+        <button onclick="toggleClothes('pink_dress'); popAudio();">
+          <img src="img/pink_dress.png" alt="pink_dress" />
+        </button>
+
+        <button onclick="toggleClothes('pink_shoes'); popAudio();">
+          <img src="img/pink_shoes.png" alt="pink_shoes" />
+        </button>
+
+        <button onclick="toggleClothes('bag'); popAudio();">
+          <img src="img/bag.png" alt="bag" />
+        </button>
+
+        <button onclick="toggleClothes('green_dress'); popAudio();">
+          <img src="img/green_dress.png" alt="green_dress" />
+        </button>
+
+        <button onclick="toggleClothes('green_shoes'); popAudio();">
+          <img src="img/green_shoes.png" alt="green_shoes" />
+        </button>
+
+        <button onclick="toggleClothes('luffy'); popAudio();">
+          <img src="img/luffy.png" alt="luffy">
+        </button>
+
+      </div>
+    </div>
+    </div>
+  </body>
 </html>
