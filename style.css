@@ -1,0 +1,55 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e3c9f2;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+/* Safe Area Insets */
+body{
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+h1,
+p,
+a,
+button{
+    font-family: "Pixellari", sans-serif !important;
+}
+
+/*Start Game Page */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-image: url("assents/background.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.start, a{
+    background-color: #e3c9f2;
+    font-size: 30px;
+    color: #000;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
